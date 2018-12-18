@@ -1,0 +1,28 @@
+.big_form{
+    padding: 15px;
+    margin-top: 50px;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 8px;
+    width: 450px;
+}
+.header{
+    text-align: center;
+}
+.error{
+    color: red;
+}
+#button{
+    margin-top: 10px;
+}
+#registration{
+    display: inline-block;
+    float: left;
+}
+#login{
+    display: inline-block;
+    float: right;
+}
+#balance{
+    border: solid black;
+}

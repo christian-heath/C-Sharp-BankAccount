@@ -1,0 +1,38 @@
+@{
+ViewData["Title"] = "Home Page";
+}
+@model bankaccount.Models.User
+<nav class="navbar navbar-expand-sm bg-primary">
+    <h1 class='header'>Welcome! Please Register!</h1>
+    <h4>Already have an account? <a style="color: black;" href="/Login">Click here to login</a></h4>
+</nav>
+<div class="container">
+    <form asp-action="Register" asp-controller="Home" method="POST" id="registration" class='big_form'>
+        <div class="form-group">
+            <span asp-validation-for="FirstName"></span>
+            <label asp-for="FirstName"></label>
+            <input type="text" asp-for='FirstName' class="form-control" id="exampleFormControlInput1">
+        </div>
+        <div class="form-group">
+            <span asp-validation-for="LastName"></span>
+            <label asp-for="LastName"></label>
+            <input type="text" asp-for='LastName' class="form-control" id="exampleFormControlInput1">
+        </div>
+        <div class="form-group">
+            <span asp-validation-for="Email"></span>
+            <label asp-for="Email"></label>
+            <input type="text" asp-for='Email' class="form-control" id="exampleFormControlInput1">
+        </div>
+        <div class="form-group">
+            <span asp-validation-for="Password"></span>
+            <label asp-for="Password"></label>
+            <input type="Password" asp-for='Password' class="form-control" id="exampleFormControlInput1">
+        </div>
+        <div class="form-group">
+            <span asp-validation-for="Confirm"></span>
+            <label asp-for="Confirm"></label>
+            <input type="Password" asp-for='Confirm' class="form-control" id="exampleFormControlInput1">
+        </div>
+        <button type="submit" value='submit' id="button" class="btn btn-primary">Submit</button>
+    </form>
+</div>

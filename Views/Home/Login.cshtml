@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "Home Page";
+    }
+    @model bankaccount.Models.LoginUser
+    <nav class="navbar navbar-expand-sm bg-primary">
+        <h1 class='header'>Welcome! Please login!</h1>
+        <h4>Don't have an account? <a style="color: black;" href="/Register">Click here to register</a></h4>
+    </nav>
+    <div class="container">
+        <form asp-action="Login" asp-controller="Home" method='post' id="login" class='big_form'>
+            <div class="form-group">
+                <h1>Login</h1>
+                <span asp-validation-for="Email"></span>
+                <label asp-for="Email"></label>
+                <input type="text" asp-for="Email" class="form-control" id="exampleFormControlInput1">
+            </div>
+            <div class="form-group">
+                <span asp-validation-for="Password"></span>
+                <label asp-for="Password"></label>
+                <input type="password" asp-for="Password" class="form-control" id="exampleFormControlInput1">
+            </div>
+            <button type="submit" value='submit' id="button" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
