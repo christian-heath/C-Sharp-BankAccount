@@ -22,6 +22,7 @@ namespace bankaccount
             // Add framework services.
             services.AddMvc();
             services.AddSession();
+            // This configures the app to use MySQL, it gets the Json Data about the Db from the Connection String in appsettings.json.
             services.AddDbContext<BankContext>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
         }
 

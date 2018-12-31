@@ -7,8 +7,11 @@ namespace bankaccount.Models
 {
     public class User
     {
+        // This model is checked when a user registers.
         [Key]
         public int UserId { get; set; }
+
+        // Each user has a list of transactions.
 
         public List<Transaction> Transactions {get; set;}
 
@@ -44,7 +47,7 @@ namespace bankaccount.Models
         public DateTime CreatedAt { get; set; } = DateTime.Now;
 
 
-        // Will not be mapped to your users table!
+        // Confirm password is not saved to the User table.
         [NotMapped]
         [Display(Name = "Password Confirm:")]
         [Compare("Password", ErrorMessage = "Passwords do not match!")]

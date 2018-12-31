@@ -14,6 +14,8 @@ namespace bankaccount.Models
 
         public DateTime CreatedAt { get; set; } = DateTime.Now;
 
+        // Each transaction has a UserID and belongs to a User object.
+
         public int UserId {get; set;}
         public User User{get; set;}
     }
